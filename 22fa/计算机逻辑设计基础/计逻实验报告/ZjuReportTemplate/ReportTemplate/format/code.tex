@@ -1,0 +1,133 @@
+% Format: If-Then structure
+\usepackage{ifthen}
+
+% Format: Code beautify
+
+\usepackage{xcolor}
+\usepackage{listings}
+\definecolor{vgreen}{RGB}{104,180,104}
+\definecolor{vblue}{RGB}{49,49,255}
+\definecolor{vorange}{RGB}{255,143,102}
+
+\lstdefinestyle{verilog-style}
+{
+    language=Verilog,
+    basicstyle=\small\ttfamily,
+    keywordstyle=\color{vblue},
+    identifierstyle=\color{black},
+    commentstyle=\color{vgreen},
+    numbers=left,
+    numberstyle=\tiny\color{black},
+    numbersep=10pt,
+    tabsize=8,
+    breaklines,
+    moredelim=*[s][\colorIndex]{[}{]},
+    literate=*{:}{:}1
+}
+
+\makeatletter
+\newcommand*\@lbracket{[}
+\newcommand*\@rbracket{]}
+\newcommand*\@colon{:}
+\newcommand*\colorIndex{%
+    \edef\@temp{\the\lst@token}%
+    \ifx\@temp\@lbracket \color{black}%
+    \else\ifx\@temp\@rbracket \color{black}%
+    \else\ifx\@temp\@colon \color{black}%
+    \else \color{vorange}%
+    \fi\fi\fi
+}
+\makeatother
+% Old Format: code highlight
+% \lstset{xleftmargin=1em,xrightmargin=1em}
+% \lstset{
+%     framexleftmargin=0.5em,
+%     framexrightmargin=1em,
+%     framextopmargin=0em,
+%     basicstyle=\footnotesize,
+%     framexbottommargin=1em
+% }
+% \lstset{
+%     backgroundcolor=\color{grey},
+%     commentstyle=\color{darkgreen},
+%     keywordstyle=\color{blue},
+%     %     caption=\lstname,
+%     basicstyle=\ttfamily\footnotesize,
+%     breaklines=true,
+%     columns=flexible,
+%     mathescape=fause,
+% %    backgroundcolor=\color{backcolour},   
+% %    commentstyle=\color{codegreen},
+% %    keywordstyle=\color{magenta},
+% %    numberstyle=\tiny\color{codegray},
+% %    stringstyle=\color{codepurple},
+% %    basicstyle=\footnotesize,
+% %    breakatwhitespace=false,         
+% %    breaklines=true,                 
+% %    captionpos=b,                    
+% %    keepspaces=true,                 
+% %    numbers=left,                    
+% %    numbersep=5pt,                  
+% %    showspaces=false,                
+% %    showstringspaces=false,
+% %    showtabs=false,                  
+%     tabsize=4,
+%     numbers=left,
+%     stepnumber=1,
+%     numberstyle=\small,
+%     numbersep=1em
+% }
+% \lstloadlanguages{
+%     C,
+%     C++,
+%     Java,
+%     Matlab,
+%     Python,
+%     Bash,
+%     Mathematica
+% }
+% \renewcommand{\lstlistingname}{代码}
+% \usepackage{caption}
+% \DeclareCaptionFont{white}{\color{white}}
+% \DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43, 0.35, 0.35,0.01}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
+% \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={bf,footnotesize}}
+% \usepackage{listings}
+% \lstset{
+%     basicstyle=\footnotesize\ttfamily, % Standardschrift
+%     %numbers=left,               % Ort der Zeilennummern
+%     numberstyle=\tiny,          % Stil der Zeilennummern
+%     %stepnumber=2,               % Abstand zwischen den Zeilennummern
+%     numbersep=5pt,              % Abstand der Nummern zum Text
+%     tabsize=4,                  % Groesse von Tabs
+%     extendedchars=true,         %
+%     breaklines=true,            % Zeilen werden Umgebrochen
+%     keywordstyle=\color{red},
+%     frame=b,         
+%     escapeinside=``,
+%     keywordstyle=[1]\textbf,    % Stil der Keywords
+%     keywordstyle=[2]\textbf,    %
+%     keywordstyle=[3]\textbf,    %
+%     keywordstyle=[4]\textbf,    %\sqrt{\sqrt{}} 
+%     %stringstyle=\color{white}\ttfamily, % Farbe der String
+%     showspaces=false,           % Leerzeichen anzeigen ?
+%     showtabs=false,             % Tabs anzeigen ?
+%     xleftmargin=17pt,
+%     framexleftmargin=17pt,
+%     framexrightmargin=5pt,
+%     framexbottommargin=4pt,
+%     %backgroundcolor=\color{lightgray},
+%     commentstyle=\color{green}, % comment color
+%     keywordstyle=\color{blue},  % keyword color
+%     stringstyle=\color{red},    % string color
+%     showstringspaces=false      % Leerzeichen in Strings anzeigen ?        
+% }
+% \lstloadlanguages{% Check Dokumentation for further languages ...
+%     %[Visual]Basic
+%     %Pascal
+%     C,
+%     C++,
+%     Python,
+%     Java
+% }
+
+\usepackage{underscore}

@@ -1,0 +1,24 @@
+
+\usepackage[toc,page,title,titletoc,header]{appendix}
+% Format: Allow user to cite the last page
+\usepackage{lastpage}
+\usepackage{multirow}
+% Format: Table of contents topic depth
+\setcounter{tocdepth}{3}
+
+% Format: Contents
+\usepackage{titletoc}
+    \titlecontents{section}[0mm]
+    {\vspace{.2\baselineskip}\bfseries}
+    {\normalsize{\thecontentslabel}~\hspace{.5em}} {}
+    {\dotfill\contentspage[{\makebox[0pt][r]{\thecontentspage}}]}
+    [\vspace{.1\baselineskip}]
+    % \dottedcontents{section}[1.16cm]{\large}{2.0em}{4pt}
+    % \dottedcontents{subsection}[2.00cm]{\normalsize}{2.0em}{4pt}
+    \setcounter{tocdepth}{2}
+
+% Function: Hyper link reference
+\usepackage{hyperref}
+    % Remove the red outline
+    \hypersetup{hidelinks,colorlinks}
+    

@@ -1,0 +1,32 @@
+
+% Remove page No.
+\thispagestyle{empty}
+
+\begin{center}
+	\includegraphics[width=0.6\textwidth]{ZJULOGO.jpg}
+\end{center}
+
+% Self-defined command: \covertitle
+\covertitle{本科实验报告}
+
+\vskip 2 cm
+
+\begin{center}
+\zihao{4}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}[]{rp{75mm}<{\centering}}
+课程名称： & \coursename{} \\ \cline{2-2}
+姓\hspace{2em}名： & \studentname{} \\ \cline{2-2}
+学\hspace{2em}院： & \collegename{} \\ \cline{2-2}
+系： & \facultyname{} \\ \cline{2-2}
+专\hspace{2em}业： & \majorname{} \\ \cline{2-2}
+学\hspace{2em}号： & \studentid{} \\ \cline{2-2}
+指导教师： & \teachername{} \\ \cline{2-2}
+\end{tabular}
+\end{center}
+
+\vskip 2 cm
+
+\begin{center}
+	\AdvanceDate[-1]\today
+\end{center}
