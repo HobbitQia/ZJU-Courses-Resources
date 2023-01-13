@@ -1,0 +1,34 @@
+% Format: Include pictures
+\usepackage{graphicx}
+\usepackage{graphics}
+
+% Format: Beautify the figure boxs
+\usepackage{fancybox}
+
+% Format: Insert multiple figures into one figure/table
+% \usepackage{subfigure}
+
+% Function: Convert eps to pdf
+\usepackage[outdir=./figures/]{epstopdf}
+    % Only regenerate pdf files when eps file is newer
+    \epstopdfsetup{update}
+
+% Format: Disable the figures to float to the top of page
+\usepackage{flafter}
+
+% Symbol: Math symbols with circle
+\usepackage{pifont}
+
+% Path: Main picture path
+% Need two pair of {}
+\graphicspath{{figures/}}
+
+% Format: Universal setting
+\setkeys{Gin}{width=0.8\textwidth}
+
+% Format: Distance between figure and caption
+\setlength{\abovecaptionskip}{0pt}
+\setlength{\belowcaptionskip}{0pt}
+
+% Format: Subfigures
+\usepackage{subfig}
